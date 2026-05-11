@@ -37,7 +37,7 @@ All credentials live in a local `.env` file (not committed). A safe example is p
 ## Detailed feature list
 
 ### 1) Intelligent decision routing
-- `Backend/Model.py` classifies each query into actionable intents such as:
+- `Backend/Model.py` uses `FirstLayerDMM` (First-Layer Decision-Making Model, DMM) to classify each query into actionable intents such as:
   - `general` (normal chat/explanations)
   - `realtime` (internet-aware queries)
   - `open`, `close`, `play`, `system`, `content`, `google search`, `youtube search`
@@ -59,7 +59,10 @@ All credentials live in a local `.env` file (not committed). A safe example is p
 
 ### 5) Natural text-to-speech output
 - `Backend/TextToSpeech.py` uses `edge-tts` + `pygame` playback.
-- For long answers, Jarvis uses a combined threshold (both conditions must be true): over ~250 characters **and** more than 4 period-delimited segments; when triggered, it speaks roughly the first two sentence segments and appends a short “check chat for the rest” message.
+- For long answers, Jarvis uses a combined threshold (both conditions must be true):
+  - over ~250 characters
+  - more than 4 period-delimited segments
+- When triggered, it speaks roughly the first two sentence segments and appends a short “check chat for the rest” message.
 
 ### 6) Automation and desktop actions
 - `Backend/Automation.py` executes multi-command actions asynchronously:
