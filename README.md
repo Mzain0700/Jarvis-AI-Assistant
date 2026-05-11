@@ -14,7 +14,7 @@ Jarvis is a local, modular AI assistant that integrates several AI services for 
 - How to run
 - Backend modules (what each does)
 - Frontend / GUI
-- Development
+- Development notes
 - Security & secrets
 - Contributing
 - License
@@ -62,6 +62,7 @@ All credentials live in a local `.env` file (not committed). A safe example is p
 - For long answers, Jarvis uses a combined threshold (both conditions must be true):
   - over 250 characters
   - more than 4 period-delimited segments (i.e., `len(text.split(".")) > 4`)
+- This avoids unnecessary truncation on short replies while still shortening very long spoken output.
 - When triggered, it speaks roughly the first two sentence segments and appends a short “check chat for the rest” message.
 
 ### 6) Automation and desktop actions
