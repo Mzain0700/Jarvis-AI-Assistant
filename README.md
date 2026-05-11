@@ -59,7 +59,7 @@ All credentials live in a local `.env` file (not committed). A safe example is p
 
 ### 5) Natural text-to-speech output
 - `Backend/TextToSpeech.py` uses `edge-tts` + `pygame` playback.
-- For long answers (over ~250 characters and more than 4 period-delimited segments), Jarvis speaks the first part and asks users to continue reading in chat.
+- For long answers, Jarvis uses a combined threshold (both conditions must be true): over ~250 characters **and** more than 4 period-delimited segments; then it speaks the first part and asks users to continue reading in chat.
 
 ### 6) Automation and desktop actions
 - `Backend/Automation.py` executes multi-command actions asynchronously:
