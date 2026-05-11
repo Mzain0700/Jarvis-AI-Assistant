@@ -59,7 +59,7 @@ All credentials live in a local `.env` file (not committed). A safe example is p
 
 ### 5) Natural text-to-speech output
 - `Backend/TextToSpeech.py` uses `edge-tts` + `pygame` playback.
-- For long answers, Jarvis smartly speaks a concise portion and asks users to continue reading in chat.
+- For long answers (more than 4 sentence splits and over ~250 characters), Jarvis speaks the first part and asks users to continue reading in chat.
 
 ### 6) Automation and desktop actions
 - `Backend/Automation.py` executes multi-command actions asynchronously:
@@ -91,7 +91,7 @@ All credentials live in a local `.env` file (not committed). A safe example is p
 
 1. You speak (or provide input) through the GUI mic flow.
 2. `SpeechToText` converts speech to text and normalizes the query.
-3. `Model.FirstLayerDMM` classifies the intent(s).
+3. `Model.FirstLayerDMM` (First-Layer Decision-Making Model) classifies the intent(s).
 4. `Main.py` orchestrates the action path:
    - `general` → `ChatBot`
    - `realtime` → `RealtimeSearchEngine`
