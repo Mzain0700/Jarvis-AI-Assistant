@@ -1,3 +1,5 @@
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/83848957-43fd-450c-a9b2-e745b5b2a840" />
+
 # Jarvis AI Assistant
 
 Jarvis is a local, modular AI assistant that integrates several AI services for chat, decision routing, image generation, and audio I/O. The project is designed to run locally with configurable backends and safe handling of secrets via a local `.env` file.
