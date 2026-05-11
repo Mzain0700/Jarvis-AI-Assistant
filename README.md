@@ -14,7 +14,7 @@ Jarvis is a local, modular AI assistant that integrates several AI services for 
 - How to run
 - Backend modules (what each does)
 - Frontend / GUI
-- Development notes
+- Development
 - Security & secrets
 - Contributing
 - License
@@ -206,7 +206,8 @@ Read top-of-file comments in each module for implementation-specific notes.
 
 ## Frontend / GUI
 
-- The GUI files live in `Frontend/`. If the GUI uses `tkinter` or other libraries, ensure they are installed and your platform supports GUI rendering.
+- The GUI files live in `Frontend/` and are built with `PyQt5`.
+- Ensure your environment supports desktop rendering for Python GUI applications.
 
 ## Development
 
